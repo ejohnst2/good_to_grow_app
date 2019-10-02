@@ -17,7 +17,8 @@ defmodule GoodToGrowAppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/hello", ReportController, :index
+    get "/reports", ReportController, :index
+    get "/reports/:messenger", HelloController, :show
   end
 
   # Other scopes may use custom stacks.
